@@ -7,8 +7,7 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "deploy": "npm run build && gh-pages -d out"
+    "lint": "next lint"
   },
   "dependencies": {
     "@codesandbox/sandpack-react": "^2.20.0",
