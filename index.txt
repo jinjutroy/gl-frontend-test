@@ -1,0 +1,1032 @@
+1:"$Sreact.fragment"
+2:I[7555,[],""]
+3:I[1295,[],""]
+4:I[7133,["193","static/chunks/e58a7f8f-e557e2463095af78.js","79","static/chunks/363642f4-df8e60c305398800.js","947","static/chunks/947-228196f833a66fd2.js","974","static/chunks/app/page-89b6c230d6010c31.js"],"default"]
+5:I[5776,["193","static/chunks/e58a7f8f-e557e2463095af78.js","79","static/chunks/363642f4-df8e60c305398800.js","947","static/chunks/947-228196f833a66fd2.js","974","static/chunks/app/page-89b6c230d6010c31.js"],"Sandpack"]
+f:I[9251,["193","static/chunks/e58a7f8f-e557e2463095af78.js","79","static/chunks/363642f4-df8e60c305398800.js","947","static/chunks/947-228196f833a66fd2.js","974","static/chunks/app/page-89b6c230d6010c31.js"],"default"]
+11:I[9665,[],"MetadataBoundary"]
+13:I[9665,[],"OutletBoundary"]
+16:I[4911,[],"AsyncMetadataOutlet"]
+18:I[9665,[],"ViewportBoundary"]
+1a:I[6614,[],""]
+:HL["/gl-frontend-test/_next/static/css/dcccc062b2d62527.css","style"]
+:HL["/gl-frontend-test/_next/static/css/b82b51330dad2c65.css","style"]
+6:T6db,<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Carousel Part 1 & 2</title> 
+    <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+    <div class="carousel">
+        <div class="carousel-container">
+            <!-- Product 1 -->
+            <div class="carousel-item">
+                <img
+                    src="https://dst.assets.gameloft.com/assets/DS_article_thumbnail_season4_1920x1080_EN_2c64867ea1.jpg"
+                    alt="Product 1"
+                />
+                <h3>SEASON 04</h3>
+                <p>Disney Speedstorm season 4 the cave of wonders available now</p>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="carousel-item">
+                <img
+                    src="https://dst.assets.gameloft.com/assets/DS_23037_S_Season3_Key_Art_XBOX_HERO_EN_1310aad214.jpg"
+                    alt="Product 2"
+                />
+                <h3>SEASON 3</h3>
+                <p>Disney Speedstorm season 3 ‘ohana available now</p>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="carousel-item">
+                <img
+                    src="https://dst.assets.gameloft.com/assets/DS_Season12_Banner_Background_EN_001c87e540.jpg"
+                    alt="Product 3"
+                />
+                <h3>SEASON 12</h3>
+                <p>Disney Speedstorm tron-inspired season 12 available now</p>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+        </div>
+    </div> 
+    <script src="./index.js"></script>
+</body>    
+</html>7:T5e3,body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.carousel {
+    width: 80%;
+    max-width: 1200px;
+    margin-inline: auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-container {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 20px;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    user-select: none;
+    aspect-ratio: 16/9;
+}
+
+.carousel-item h3 {
+    font-size: 2rem;
+    margin: 10px 0;
+    font-weight: 700;
+}
+
+.carousel-item p {
+    font-size: 1.25rem;
+    color: #555;
+}
+
+.controls {
+    position: absolute;
+    user-select: none;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.prev,
+.next {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+.prev {
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.next {
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.prev:hover,
+.next:hover {
+    transition: all 0.15s ease;
+    background-color: rgba(0, 0, 0, 0.8);
+}8:Td3c,<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Part 1.2: Responsive Product Carousel</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="carousel">
+      <div class="carousel-container">
+        <!-- Product 1 -->
+        <div class="carousel-item">
+          <div class="carousel-item-content">
+            <img
+              src="https://dst.assets.gameloft.com/assets/DS_article_thumbnail_season4_1920x1080_EN_2c64867ea1.jpg"
+              alt="Product 1"
+            />
+            <h3>SEASON 04</h3>
+            <p>Disney Speedstorm season 4 the cave of wonders available now</p>
+          </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="carousel-item">
+          <div class="carousel-item-content">
+            <img
+              src="https://dst.assets.gameloft.com/assets/DS_23037_S_Season3_Key_Art_XBOX_HERO_EN_1310aad214.jpg"
+              alt="Product 2"
+            />
+            <h3>SEASON 3</h3>
+            <p>Disney Speedstorm season 3 ‘ohana available now</p>
+          </div>
+        </div>
+        <!-- Product 3 -->
+        <div class="carousel-item">
+          <div class="carousel-item-content">
+            <img
+              src="https://dst.assets.gameloft.com/assets/DS_Season12_Banner_Background_EN_001c87e540.jpg"
+              alt="Product 3"
+            />
+            <h3>SEASON 12</h3>
+            <p>Disney Speedstorm tron-inspired season 12 available now</p>
+          </div>
+          <!-- Product 4 -->
+        </div>
+        <div class="carousel-item">
+          <div class="carousel-item-content">
+            <img
+              src="https://dst.assets.gameloft.com/assets/DS_article_thumbnail_season4_1920x1080_EN_2c64867ea1.jpg"
+              alt="Product 4"
+            />
+            <h3>SEASON 04</h3>
+            <p>Disney Speedstorm season 4 the cave of wonders available now</p>
+          </div>
+        </div>
+        <!-- Product 5 -->
+        <div class="carousel-item">
+          <div class="carousel-item-content">
+            <img
+              src="https://dst.assets.gameloft.com/assets/DS_23037_S_Season3_Key_Art_XBOX_HERO_EN_1310aad214.jpg"
+              alt="Product 5"
+            />
+            <h3>SEASON 3</h3>
+            <p>Disney Speedstorm season 3 ‘ohana available now</p>
+          </div>
+        </div>
+        <!-- Product 6 -->
+        <div class="carousel-item">
+          <div class="carousel-item-content">
+            <img
+              src="https://dst.assets.gameloft.com/assets/DS_Season12_Banner_Background_EN_001c87e540.jpg"
+              alt="Product 6"
+            />
+            <h3>SEASON 12</h3>
+            <p>Disney Speedstorm tron-inspired season 12 available now</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-controls">
+      <button id="prev" class="page-dot left-arrow" aria-label="Previous Slide">
+        &lt;
+      </button>
+      <div class="carousel-pagination">
+        <span class="page-dot active">1</span>
+        <span class="page-dot">2</span>
+        <span class="page-dot">3</span>
+      </div>
+      <button id="next" class="page-dot right-arrow" aria-label="Next Slide">
+        &gt;
+      </button>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>
+9:T9d8,*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  padding: 20px;
+}
+
+.carousel {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.carousel-container {
+  display: flex;
+  overflow: auto;
+  padding: 1rem 0;
+  scrollbar-width: none; /* For Firefox */
+  -ms-overflow-style: none; /* For Internet Explorer and Edge */
+}
+
+.carousel-container::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Opera */
+}
+
+.carousel-item {
+  padding: 10px;
+}
+
+.carousel-item-content {
+  background-color: #fff;
+  border-radius: 10px;
+  height: 100%;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+/* Mobile: 1 item per row */
+.carousel-item {
+  flex: 0 0 100%;
+}
+
+.carousel-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  gap: 10px;
+  margin: 0 auto;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.carousel-item h3 {
+  margin: 10px 0;
+}
+
+.carousel-item p {
+  color: #555;
+}
+
+.carousel-pagination {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  position: relative;
+}
+
+.page-dot {
+  border: 1px solid #d9d9d9;
+  cursor: pointer;
+  color: #333;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: all 0.3s ease;
+  font-size: 14px;
+  background-color: #fff;
+  aspect-ratio: 1 / 1;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.page-dot:hover {
+  border-color: #40a9ff;
+  color: #40a9ff;
+}
+
+.page-dot.active {
+  border-color: #1677ff;
+  background-color: #1677ff;
+  box-shadow: unset;
+  color: #fff;
+}
+
+.arrow {
+  background-color: #fff;
+  border: 1px solid #d9d9d9;
+  border-radius: 0.5rem;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.arrow:hover {
+  border-color: #40a9ff;
+  background-color: #f0f8ff;
+}
+
+.arrow.left-arrow {
+  left: 10px;
+}
+
+.arrow.right-arrow {
+  right: 10px;
+}
+
+/* Tablet: 2 items per row */
+@media (min-width: 768px) {
+  .page-dot {
+    width: 36px;
+    height: 36px;
+  }
+  .carousel-item {
+    flex: 0 0 calc(100% / 2);
+  }
+}
+
+/* Desktop: 3 items per row */
+@media (min-width: 1024px) {
+  .page-dot {
+    width: 40px;
+    height: 40px;
+  }
+
+  .carousel-item {
+    flex: 0 0 calc(100% / 3);
+  }
+}
+
+      a:T782,const container = document.querySelector(".carousel-container");
+const items = document.querySelectorAll(".carousel-item");
+const pagination = document.querySelector(".carousel-pagination");
+const prevBtn = document.getElementById("prev");
+const nextBtn = document.getElementById("next");
+
+let currentIndex = 0;
+let itemsPerPage = getItemsPerPage();
+
+function getItemsPerPage() {
+  const width = window.innerWidth;
+  if (width >= 1024) return 3;
+  if (width >= 768) return 2;
+  return 1;
+}
+
+function updatePagination() {
+  pagination.innerHTML = "";
+  const totalPages = Math.ceil(items.length / itemsPerPage);
+
+  for (let i = 0; i < totalPages; i++) {
+    const dot = document.createElement("span");
+    dot.className = "page-dot";
+    dot.textContent = i + 1;
+    if (i === currentIndex) dot.classList.add("active");
+
+    dot.addEventListener("click", () => {
+      currentIndex = i;
+      updateView();
+    });
+
+    pagination.appendChild(dot);
+  }
+}
+
+function updateView() {
+  const scrollX = currentIndex * container.clientWidth;
+  container.scrollTo({
+    left: scrollX,
+    behavior: "smooth",
+  });
+
+  document
+    .querySelectorAll(".page-dot")
+    .forEach((dot) => dot.classList.remove("active"));
+  const activeDot = pagination.children[currentIndex];
+  if (activeDot) activeDot.classList.add("active");
+}
+
+function goPrev() {
+  if (currentIndex > 0) {
+    currentIndex--;
+    updateView();
+  }
+}
+
+function goNext() {
+  const maxPage = Math.ceil(items.length / itemsPerPage) - 1;
+  if (currentIndex < maxPage) {
+    currentIndex++;
+    updateView();
+  }
+}
+
+prevBtn.addEventListener("click", goPrev);
+nextBtn.addEventListener("click", goNext);
+
+window.addEventListener("resize", () => {
+  const newCount = getItemsPerPage();
+  if (newCount !== itemsPerPage) {
+    itemsPerPage = newCount;
+    currentIndex = 0;
+    updatePagination();
+    updateView();
+  }
+});
+
+// Initial load
+updatePagination();
+updateView();b:T851,
+  import React, { useState } from "react";
+  import "./style.css";
+  
+  const discount = 10; // 10% discount
+  
+  // Function to calculate the total value of products and apply discount when quantity > 5
+  function getTotalValue(products) {
+    return products.reduce(
+      (totals, { price, quantity }) => {
+        const base = price * quantity;
+        const discounted = quantity > 5 ? base * 0.9 : base;
+  
+        totals.baseTotal += base;
+        totals.discountedTotal += discounted;
+  
+        return totals;
+      },
+      { baseTotal: 0, discountedTotal: 0 }
+    );
+  }
+  
+  export default function App() {
+    const [products, setProducts] = useState([
+      { name: "Laptop", price: 1000, quantity: 2 },
+      { name: "Mouse", price: 25, quantity: 6 },
+      { name: "Monitor", price: 300, quantity: 1 },
+    ]);
+  
+    const handleAdd = () => {
+      const newProduct = {
+        name: "Test Product",
+        price: Math.floor(Math.random() * 100 + 20),
+        quantity: Math.floor(Math.random() * 10 + 1),
+      };
+      setProducts([...products, newProduct]);
+    };
+  
+    const total = getTotalValue(products);
+  
+    return (
+      <div className="container">
+        <h1>Product List</h1>
+        <i> Note: If quantity &gt; 5, a <strong>10%</strong> discount will be applied automatically. </i>
+        <br />
+        <div className="product-list">
+          {products.map((p, i) => {
+            const basePrice = p.price * p.quantity;
+            const discountedPrice = p.quantity > 5 ? basePrice * 0.9 : basePrice;
+            return (
+              <div className="product" key={i}>
+                <span>{p.name} (x{p.quantity})</span>
+                <span>
+                  {p.quantity > 5 ? <s>{basePrice.toFixed(0)} USD</s>:<></>} {discountedPrice.toFixed(0)} USD
+                </span>
+              </div>
+            );
+          })}
+        </div>
+        <div className="total"> 
+          <div><strong>Total Value:</strong> {total.discountedTotal.toFixed(0)} USD</div>
+        </div>
+        <button onClick={handleAdd} className="add-btn">Add Product</button>
+      </div>
+    );
+  }
+  c:Tdf7,<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Part 1.2: Responsive Product Carousel</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+     <div class="carousel">
+      <div class="carousel-container">
+        <!-- Product 1 -->
+        <div class="carousel-item">
+          <div class="carousel-item-content">
+            <img
+              src="https://dst.assets.gameloft.com/assets/DS_article_thumbnail_season4_1920x1080_EN_2c64867ea1.jpg"
+              alt="Product 1"
+            />
+            <h3>SEASON 04</h3>
+            <p>Disney Speedstorm season 4 the cave of wonders available now</p>
+          </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="carousel-item">
+          <div class="carousel-item-content">
+            <img
+              src="https://dst.assets.gameloft.com/assets/DS_23037_S_Season3_Key_Art_XBOX_HERO_EN_1310aad214.jpg"
+              alt="Product 2"
+            />
+            <h3>SEASON 3</h3>
+            <p>Disney Speedstorm season 3 ‘ohana available now</p>
+          </div>
+        </div>
+        <!-- Product 3 -->
+        <div class="carousel-item">
+          <div class="carousel-item-content">
+            <img
+              src="https://dst.assets.gameloft.com/assets/DS_Season12_Banner_Background_EN_001c87e540.jpg"
+              alt="Product 3"
+            />
+            <h3>SEASON 12</h3>
+            <p>Disney Speedstorm tron-inspired season 12 available now</p>
+          </div>
+          <!-- Product 4 -->
+        </div>
+        <div class="carousel-item">
+          <div class="carousel-item-content">
+            <img
+              src="https://dst.assets.gameloft.com/assets/DS_article_thumbnail_season4_1920x1080_EN_2c64867ea1.jpg"
+              alt="Product 4"
+            />
+            <h3>SEASON 04</h3>
+            <p>Disney Speedstorm season 4 the cave of wonders available now</p>
+          </div>
+        </div>
+        <!-- Product 5 -->
+        <div class="carousel-item">
+          <div class="carousel-item-content">
+            <img
+              src="https://dst.assets.gameloft.com/assets/DS_23037_S_Season3_Key_Art_XBOX_HERO_EN_1310aad214.jpg"
+              alt="Product 5"
+            />
+            <h3>SEASON 3</h3>
+            <p>Disney Speedstorm season 3 ‘ohana available now</p>
+          </div>
+        </div>
+        <!-- Product 6 -->
+        <div class="carousel-item">
+          <div class="carousel-item-content">
+            <img
+              src="https://dst.assets.gameloft.com/assets/DS_Season12_Banner_Background_EN_001c87e540.jpg"
+              alt="Product 6"
+            />
+            <h3>SEASON 12</h3>
+            <p>Disney Speedstorm tron-inspired season 12 available now</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-controls">
+      <button id="prev" class="page-dot left-arrow" aria-label="Previous Slide">
+        &lt;
+      </button>
+      <div class="carousel-pagination">
+        <span class="page-dot active">1</span>
+        <span class="page-dot">2</span>
+        <span class="page-dot">3</span>
+      </div>
+      <button id="next" class="page-dot right-arrow" aria-label="Next Slide">
+        &gt;
+      </button>
+    </div>
+    <!-- Modal -->
+    <div id="imageModal" class="modal">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <img class="modal-content" id="modalImage" />
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>
+d:Td5e,*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  padding: 20px;
+}
+
+.carousel {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.carousel-container {
+  display: flex;
+  overflow: auto;
+  padding: 1rem 0;
+  scrollbar-width: none; /* For Firefox */
+  -ms-overflow-style: none; /* For Internet Explorer and Edge */
+}
+
+.carousel-container::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Opera */
+}
+
+.carousel-item {
+  padding: 10px;
+}
+
+.carousel-item-content:hover {
+  transform: scale(1.02);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-item-content {
+  background-color: #fff;
+  border-radius: 10px;
+  height: 100%;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+/* Mobile: 1 item per row */
+.carousel-item {
+  flex: 0 0 100%;
+}
+
+.carousel-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  gap: 10px;
+  margin: 0 auto;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.carousel-item h3 {
+  margin: 10px 0;
+}
+
+.carousel-item p {
+  color: #555;
+}
+
+.carousel-pagination {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  position: relative;
+}
+
+.page-dot {
+  border: 1px solid #d9d9d9;
+  cursor: pointer;
+  color: #333;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: all 0.3s ease;
+  font-size: 14px;
+  background-color: #fff;
+  aspect-ratio: 1 / 1;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.page-dot:hover {
+  border-color: #40a9ff;
+  color: #40a9ff;
+}
+
+.page-dot.active {
+  border-color: #1677ff;
+  background-color: #1677ff;
+  box-shadow: unset;
+  color: #fff;
+}
+
+.arrow {
+  background-color: #fff;
+  border: 1px solid #d9d9d9;
+  border-radius: 0.5rem;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.arrow:hover {
+  border-color: #40a9ff;
+  background-color: #f0f8ff;
+}
+
+.arrow.left-arrow {
+  left: 10px;
+}
+
+.arrow.right-arrow {
+  right: 10px;
+}
+
+/* Modal Styling */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+.modal-content {
+  display: block;
+  margin: auto;
+  max-width: 90%;
+  max-height: 80%;
+  animation: zoomIn 0.2s ease;
+  border-radius: 10px;
+}
+
+.close {
+  position: absolute;
+  top: 25px;
+  right: 35px;
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Tablet: 2 items per row */
+@media (min-width: 768px) {
+  .page-dot {
+    width: 36px;
+    height: 36px;
+  }
+  .carousel-item {
+    flex: 0 0 calc(100% / 2);
+  }
+}
+
+/* Desktop: 3 items per row */
+@media (min-width: 1024px) {
+  .page-dot {
+    width: 40px;
+    height: 40px;
+  }
+
+  .carousel-item {
+    flex: 0 0 calc(100% / 3);
+  }
+}
+
+      e:T985,const container = document.querySelector(".carousel-container");
+const items = document.querySelectorAll(".carousel-item");
+const pagination = document.querySelector(".carousel-pagination");
+const prevBtn = document.getElementById("prev");
+const nextBtn = document.getElementById("next");
+
+let currentIndex = 0;
+let itemsPerPage = getItemsPerPage();
+
+function getItemsPerPage() {
+  const width = window.innerWidth;
+  if (width >= 1024) return 3;
+  if (width >= 768) return 2;
+  return 1;
+}
+
+items.forEach((item) => {
+  item.addEventListener("click", () => {
+    const img = item.querySelector("img");
+    if (img) {
+      openModal(img.src);
+    }
+  });
+});
+
+// Update pagination with list of cards
+function updatePagination() {
+  pagination.innerHTML = "";
+  const totalPages = Math.ceil(items.length / itemsPerPage);
+
+  for (let i = 0; i < totalPages; i++) {
+    const dot = document.createElement("span");
+    dot.className = "page-dot";
+    dot.textContent = i + 1;
+    if (i === currentIndex) dot.classList.add("active");
+
+    dot.addEventListener("click", () => {
+      currentIndex = i;
+      updateView();
+    });
+
+    pagination.appendChild(dot);
+  }
+}
+
+function updateView() {
+  const scrollX = currentIndex * container.clientWidth;
+  container.scrollTo({
+    left: scrollX,
+    behavior: "smooth",
+  });
+
+  document
+    .querySelectorAll(".page-dot")
+    .forEach((dot) => dot.classList.remove("active"));
+  const activeDot = pagination.children[currentIndex];
+  if (activeDot) activeDot.classList.add("active");
+}
+
+function goPrev() {
+  if (currentIndex > 0) {
+    currentIndex--;
+    updateView();
+  }
+}
+
+function goNext() {
+  const maxPage = Math.ceil(items.length / itemsPerPage) - 1;
+  if (currentIndex < maxPage) {
+    currentIndex++;
+    updateView();
+  }
+}
+
+prevBtn.addEventListener("click", goPrev);
+nextBtn.addEventListener("click", goNext);
+
+window.addEventListener("resize", () => {
+  const newCount = getItemsPerPage();
+  if (newCount !== itemsPerPage) {
+    itemsPerPage = newCount;
+    currentIndex = 0;
+    updatePagination();
+    updateView();
+  }
+});
+
+function openModal(imageSrc) {
+  const modal = document.getElementById("imageModal");
+  const modalImg = document.getElementById("modalImage");
+
+  modal.style.display = "block";
+  modalImg.src = imageSrc;
+}
+
+function closeModal() {
+  document.getElementById("imageModal").style.display = "none";
+}
+
+// Initial load
+updatePagination();
+updateView();
+
+      10:T60d,
+  import React, { useState } from "react";  
+  export default function App() {
+   
+    return (
+    <div>
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
+    {/* Sidebar */}
+      <aside className="bg-gray-100 p-4">
+        <h2 className="text-lg font-semibold mb-2">Sidebar</h2>
+        <p>Navigation or filters here.</p>
+      </aside>
+
+      {/* Main Content */}
+      <main className="bg-white p-4">
+        <h1 className="text-xl font-bold mb-2">Main Content</h1>
+        <p>This is the main content area.</p>
+      </main>
+
+      {/* Extra Section */}
+      <section className="bg-gray-50 p-4 hidden lg:block">
+        <h2 className="text-lg font-semibold mb-2">Extra</h2>
+        <p>Additional content like ads, tools, etc.</p>
+      </section> 
+    </div>
+    <div className="ml-4">
+        <h4 className="mt-4 mb-2 font-bold text-2xl">CSS Grid Classes</h4>
+        <ul className="list-disc list-inside ml-6">
+          <li>
+            <span className="font-semibold">grid-cols-1:</span> 1 column on
+            mobile
+          </li>
+          <li>
+            <span className="font-semibold">md:grid-cols-2:</span> 2 columns
+            on tablets
+          </li>
+          <li>
+            <span className="font-semibold">lg:grid-cols-3:</span> 3 columns
+            on laptops/desktops
+          </li>
+          <li>
+            <span className="font-semibold">hidden lg:block:</span> Hides
+            the third column on smaller screens
+          </li>
+        </ul>
+      </div>
+    </div>
+    );
+  }
+  0:{"P":null,"b":"NINNDk83kIIpi-ukHptp6","p":"/gl-frontend-test","c":["",""],"i":false,"f":[[["",{"children":["__PAGE__",{}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/gl-frontend-test/_next/static/css/dcccc062b2d62527.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","children":["$","body",null,{"className":"__variable_2c8505 __variable_8d10d0 antialiased","children":["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]}]]}],{"children":["__PAGE__",["$","$1","c",{"children":[["$","div",null,{"className":"bg-white py-20 px-10 text-black","children":[["$","h1",null,{"className":"text-5xl font-bold mb-10 text-center","children":"FRONTEND TEST"}],["$","div",null,{"className":"part-1","children":[["$","h3",null,{"className":"font-bold text-3xl mb-8","children":"Part 1: Responsive HTML & CSS"}],["$","div",null,{"children":[["$","p",null,{"className":"text-lg mb-4","children":"1. Create an HTML page that displays a product carousel showcasing three different products."}],["$","$L4",null,{"children":[["$","p",null,{"className":"mb-2","children":[["$","span",null,{"className":"text-red-400","children":"*Note:"}],"I added some CSS and JS in separate files to make the HTML preview more interactive and dynamic."]}],["$","$L5",null,{"template":"static","theme":"dark","options":{"wrapContent":true,"showLineNumbers":false,"editorWidthPercentage":30,"editorHeight":800,"resizablePanels":true},"files":{"/index.html":{"code":"$6"},"/styles.css":{"code":"$7","hidden":true},"/index.js":{"code":"let currentIndex = 0;\nconst items = document.querySelectorAll(\".carousel-item\");\nconst prevButton = document.querySelector(\".prev\");\nconst nextButton = document.querySelector(\".next\");\nconst carouselContainer = document.querySelector(\".carousel-container\");\n\n// Show the current slide\nfunction updateCarousel() {\ncarouselContainer.style.transform = \"translateX(-\" + currentIndex * 100 + \"%)\";\n// Hide buttons at boundaries\nprevButton.style.visibility = currentIndex === 0 ? \"hidden\" : \"visible\";\nnextButton.style.visibility =\n    currentIndex === items.length - 1 ? \"hidden\" : \"visible\";\n}\n\n// Previous button\nprevButton.addEventListener(\"click\", () => {\nif (currentIndex > 0) {\n    currentIndex -= 1;\n    updateCarousel();\n}\n});\n\n// Next button\nnextButton.addEventListener(\"click\", () => {\nif (currentIndex < items.length - 1) {\n    currentIndex += 1;\n    updateCarousel();\n}\n});\n\n// Initialize carousel\nupdateCarousel();","hidden":true}}}]]}]]}],["$","div",null,{"children":[["$","p",null,{"className":"text-lg mb-4 mt-8","children":"2. Style the product carousel using CSS to achieve the following:"}],["$","$L4",null,{"children":[["$","p",null,{"className":"mb-2","children":[["$","span",null,{"className":"text-red-400","children":"*Note:"}],"To test responsiveness, simply drag the editor's edge — there's no need to open the browser's developer tools"]}],["$","$L5",null,{"template":"static","theme":"dark","options":{"wrapContent":true,"showLineNumbers":false,"editorWidthPercentage":30,"editorHeight":800,"resizablePanels":true},"files":{"/index.html":{"code":"$8"},"/styles.css":{"code":"$9"},"/index.js":{"code":"$a","hidden":true}}}]]}]]}]]}],["$","div",null,{"children":[["$","h3",null,{"className":"font-bold text-3xl mb-8 mt-16","children":"Part 2: JavaScript"}],["$","div",null,{"children":[["$","p",null,{"className":"text-lg mb-4","children":"1. Write a JavaScript function that takes an array of objects representing products (each object should have properties like \"name,\" \"price,\" and \"quantity\") and returns the total value of all products in the array, applying a discount if the quantity is greater than 5."}],["$","$L4",null,{"children":["$","$L5",null,{"template":"react","theme":"dark","options":{"wrapContent":true,"showLineNumbers":false,"editorWidthPercentage":30,"editorHeight":800,"resizablePanels":true},"files":{"/App.js":{"code":"$b"},"/style.css":{"code":"body {\n    font-family: Arial, sans-serif;\n    background: #f4f4f4;\n    margin: 0;\n    padding: 20px;\n  }\n  \n  .container {\n    max-width: 600px;\n    margin: auto;\n    background: white;\n    padding: 20px;\n    border-radius: 8px;\n    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);\n  }\n  \n  h1 {\n    text-align: center;\n  }\n  \n  .product {\n    display: flex;\n    justify-content: space-between;\n    padding: 10px 0;\n    border-bottom: 1px solid #ddd;\n  }\n  \n  .product span s {\n    color: red;\n    margin-right: 10px;\n    opacity: 0.6;\n    font-size: 0.9em;\n  }\n  \n  .total {\n    text-align: right;\n    font-size: 1.2em;\n    margin-top: 20px;\n  }\n  .add-btn {\n    display: block;\n    margin: 20px auto;\n    padding: 10px 20px;\n    background: #007bff;\n    color: white;\n    border: none;\n    border-radius: 5px;\n    cursor: pointer;\n    font-size: 1em;\n  }","hidden":true},"/index.js":{"code":"import React from \"react\";\n  import { createRoot } from \"react-dom/client\";\n  import App from \"./App\";\n  \n  const root = createRoot(document.getElementById(\"root\"));\n  root.render(<App />);","hidden":true}}}]}]]}],["$","div",null,{"children":[["$","p",null,{"className":"text-lg mb-4 mt-8","children":"2. Style the product carousel using CSS to achieve the following:"}],["$","$L4",null,{"children":[["$","p",null,{"className":"mb-2","children":[["$","span",null,{"className":"text-red-400","children":"*Note:"}],"To test responsiveness, simply drag the editor's edge — there's no need to open the browser's developer tools. You can click on the Card to see the Larger State"]}],["$","$L5",null,{"template":"static","theme":"dark","options":{"wrapContent":true,"showLineNumbers":false,"editorWidthPercentage":30,"editorHeight":800,"resizablePanels":true},"files":{"/index.html":{"code":"$c"},"/styles.css":{"code":"$d"},"/index.js":{"code":"$e"}}}]]}]]}]]}],["$","div",null,{"children":[["$","h3",null,{"className":"font-bold text-3xl mb-8 mt-16","children":"Part 3: ReactJS & TailwindCSS"}],["$","div",null,{"children":[["$","h3",null,{"className":"text-lg mb-4","children":"1.Briefly explain the concept of props and state in ReactJS and how they are used to manage data flow within components."}],["$","$L4",null,{"children":[["$","div",null,{"className":"flex flex-wrap justify-between text-md","children":["$","table",null,{"className":"table-auto border-collapse border border-gray-400 text-left","children":[["$","thead",null,{"children":["$","tr",null,{"children":[["$","th",null,{"className":"border border-gray-400 px-4 py-2","children":"Aspect"}],["$","th",null,{"className":"border border-gray-400 px-4 py-2","children":"Props"}],["$","th",null,{"className":"border border-gray-400 px-4 py-2","children":"State"}]]}]}],["$","tbody",null,{"children":[["$","tr",null,{"children":[["$","td",null,{"className":"border border-gray-400 px-4 py-2 font-semibold","children":"What"}],["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":"Props are read-only data passed from a parent component to a child component."}],["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":"State is data that is managed within a component and can change over time."}]]}],["$","tr",null,{"children":[["$","td",null,{"className":"border border-gray-400 px-4 py-2 font-semibold","children":"Use case"}],["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":"For customizing or configuring a child component."}],["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":"For tracking user input, toggles, counters, etc."}]]}],["$","tr",null,{"children":[["$","td",null,{"className":"border border-gray-400 px-4 py-2 font-semibold","children":"Direction"}],["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":"Data flows from parent ➝ child."}],["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":"Data is managed locally, but can be lifted up if needed."}]]}]]}]]}]}],["$","div",null,{"className":"mt-8 mb-2 font-bold text-2xl","children":"Props vs State — Data Flow"}],["$","div",null,{"className":"flex flex-wrap justify-between text-md","children":["$","table",null,{"className":"table-auto border-collapse border border-gray-400 text-left","children":[["$","thead",null,{"children":["$","tr",null,{"children":[["$","th",null,{"className":"border border-gray-400 px-4 py-2","children":"Feature"}],["$","th",null,{"className":"border border-gray-400 px-4 py-2","children":"Props"}],["$","th",null,{"className":"border border-gray-400 px-4 py-2","children":"State"}]]}]}],["$","tbody",null,{"children":[["$","tr",null,{"children":[["$","td",null,{"className":"border border-gray-400 px-4 py-2 font-semibold","children":"Direction"}],["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":"From parent ➝ child"}],["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":"Stays within the component"}]]}],["$","tr",null,{"children":[["$","td",null,{"className":"border border-gray-400 px-4 py-2 font-semibold","children":"Controlled by"}],["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":"Parent component"}],["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":"Current component"}]]}],["$","tr",null,{"children":[["$","td",null,{"className":"border border-gray-400 px-4 py-2 font-semibold","children":"Mutable?"}],["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":"❌ No (read-only)"}],["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":"✅ Yes (can be updated)"}]]}],["$","tr",null,{"children":[["$","td",null,{"className":"border border-gray-400 px-4 py-2 font-semibold","children":"Usage"}],["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":"Pass static or controlled data"}],["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":"Handle dynamic data like inputs"}]]}],["$","tr",null,{"children":[["$","td",null,{"className":"border border-gray-400 px-4 py-2 font-semibold","children":"Triggers Re-render?"}],["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":"✅ Yes"}],["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":"✅ Yes"}]]}]]}]]}]}],["$","div",null,{"className":"mt-6 font-bold text-xl","children":"Advanced Concepts:"}],["$","table",null,{"className":"table-auto border-collapse border border-gray-400 text-left mt-3","children":[["$","thead",null,{"children":["$","tr",null,{"children":[["$","th",null,{"className":"border border-gray-400 px-4 py-2","children":"Concept"}],["$","th",null,{"className":"border border-gray-400 px-4 py-2","children":"Description"}],["$","th",null,{"className":"border border-gray-400 px-4 py-2","children":"Related To"}],["$","th",null,{"className":"border border-gray-400 px-4 py-2","children":"Key Benefit"}],["$","th",null,{"className":"border border-gray-400 px-4 py-2","children":"Common Pitfall"}]]}]}],["$","tbody",null,{"children":[["$","tr","0",{"children":[["$","td",null,{"className":"border border-gray-400 px-4 py-2 font-semibold","children":"Prop Drilling"}],["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":"Passing props through many layers of components"}],["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":"Props"}],["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":"Simple for small trees"}],["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":"Becomes messy in large apps"}]]}],["$","tr","1",{"children":[["$","td",null,{"className":"border border-gray-400 px-4 py-2 font-semibold","children":"State Lifting"}],["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":"Moving state up to the nearest common ancestor for shared logic"}],["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":"State"}],["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":"Syncs data between siblings"}],["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":"Requires careful design of component tree"}]]}],["$","tr","2",{"children":[["$","td",null,{"className":"border border-gray-400 px-4 py-2 font-semibold","children":"Derived State from Props"}],["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":"Compute values from props instead of copying into state"}],["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":"Both"}],["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":"Avoids duplicate state"}],["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":"Don’t copy props to state unless necessary"}]]}],["$","tr","3",{"children":[["$","td",null,{"className":"border border-gray-400 px-4 py-2 font-semibold","children":"Controlled Components"}],["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":"Form elements whose values are controlled via state"}],["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":"State"}],["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":"Full control over inputs"}],["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":"More verbose; needs more code"}]]}],["$","tr","4",{"children":[["$","td",null,{"className":"border border-gray-400 px-4 py-2 font-semibold","children":"Uncontrolled Components"}],["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":"Use `ref` to access DOM elements directly (less state usage)"}],["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":"Neither"}],["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":"Quick setup for simple forms"}],["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":"Harder to validate or control dynamically"}]]}],["$","tr","5",{"children":[["$","td",null,{"className":"border border-gray-400 px-4 py-2 font-semibold","children":"Performance Optimization"}],["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":"Prevent unnecessary renders using memoization tools"}],["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":"Both"}],["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":"Better performance in large apps"}],["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":"Premature optimization can complicate logic"}]]}],["$","tr","6",{"children":[["$","td",null,{"className":"border border-gray-400 px-4 py-2 font-semibold","children":"useCallback & useMemo"}],["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":"Memoize functions and computed values"}],["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":"State"}],["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":"Avoid re-renders or heavy recalculations"}],["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":"Must be used with correct dependencies"}]]}],["$","tr","7",{"children":[["$","td",null,{"className":"border border-gray-400 px-4 py-2 font-semibold","children":"Custom Hooks"}],["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":"Encapsulate reusable logic into a hook"}],["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":"State"}],["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":"Clean, reusable, testable logic"}],["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":"Becomes abstract if not documented well"}]]}],["$","tr","8",{"children":[["$","td",null,{"className":"border border-gray-400 px-4 py-2 font-semibold","children":"Global State Management"}],["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":"Manage state across unrelated components (Redux, Zustand, Recoil, etc.)"}],["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":"State"}],["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":"Centralized, scalable data control"}],["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":"Adds complexity & setup"}]]}],["$","tr","9",{"children":[["$","td",null,{"className":"border border-gray-400 px-4 py-2 font-semibold","children":"Context API"}],["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":"Avoid prop drilling by providing global-like props to children"}],["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":"Props"}],["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":"Cleaner sharing of data across tree"}],["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":"Overuse may affect performance"}]]}]]}]]}]]}]]}],["$","$Lf",null,{}]]}],["$","div",null,{"children":[["$","h3",null,{"className":"font-bold text-3xl mb-8 mt-16","children":"Part 4: Problem Solving & Advanced Concepts"}],["$","div",null,{"children":[["$","h3",null,{"className":"text-lg mb-4","children":"1.Describe the concept of CSS specificity and explain how it determines which styles are applied to an element. Provide examples of different selectors and their relative specificity levels."}],["$","$L4",null,{"children":[["$","div",null,{"className":"flex flex-wrap gap-10","children":[["$","div",null,{"children":[["$","div",null,{"className":"mt-8 mb-2 font-bold text-2xl","children":"How Specificity Works:"}],["$","table",null,{"className":"table-auto border-collapse border border-gray-400","children":[["$","thead",null,{"children":["$","tr",null,{"children":[["$","th",null,{"className":"border border-gray-400 px-4 py-2","children":"Selector Type"}],["$","th",null,{"className":"border border-gray-400 px-4 py-2","children":"Specificity Value"}]]}]}],["$","tbody",null,{"children":[["$","tr",null,{"children":[["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":"Inline styles"}],["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":["$","strong",null,{"children":"1000"}]}]]}],["$","tr",null,{"children":[["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":["ID selectors (",["$","code",null,{"className":"bg-gray-200","children":"#id"}],")"]}],["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":["$","strong",null,{"children":"100"}]}]]}],["$","tr",null,{"children":[["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":["Class selectors (",["$","code",null,{"className":"bg-gray-200","children":".class"}],")",["$","br",null,{}],"Attribute selectors (",["$","code",null,{"className":"bg-gray-200","children":"[type=\"text\"]"}],")",["$","br",null,{}],"Pseudo-classes (",["$","code",null,{"className":"bg-gray-200","children":":hover"}],")"]}],["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":["$","strong",null,{"children":"10"}]}]]}],["$","tr",null,{"children":[["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":["Element selectors (",["$","code",null,{"className":"bg-gray-200","children":"div"}],","," ",["$","code",null,{"className":"bg-gray-200","children":"h1"}],", etc.)",["$","br",null,{}],"Pseudo-elements (",["$","code",null,{"className":"bg-gray-200","children":"::before"}],")"]}],["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":["$","strong",null,{"children":"1"}]}]]}],["$","tr",null,{"children":[["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":["Universal selector (",["$","code",null,{"className":"bg-gray-200","children":"*"}],"), combinators (",["$","code",null,{"className":"bg-gray-200","children":"+"}],","," ",["$","code",null,{"className":"bg-gray-200","children":">"}],","," ",["$","code",null,{"className":"bg-gray-200","children":"~"}],"), and negation (",["$","code",null,{"className":"bg-gray-200","children":":not()"}],")"]}],["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":["$","strong",null,{"children":"0"}]}]]}]]}]]}]]}],["$","div",null,{"children":[["$","div",null,{"className":"mt-8 mb-2 font-bold text-2xl","children":"Examples of Specificity Rankings:"}],["$","table",null,{"className":"table-auto border-collapse border border-gray-400","children":[["$","thead",null,{"children":["$","tr",null,{"children":[["$","th",null,{"className":"border border-gray-400 px-4 py-2","children":"Selector"}],["$","th",null,{"className":"border border-gray-400 px-4 py-2","children":"Specificity Score"}],["$","th",null,{"className":"border border-gray-400 px-4 py-2","children":"Explanation"}]]}]}],["$","tbody",null,{"children":[["$","tr",null,{"children":[["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":["$","code",null,{"className":"bg-gray-200","children":"h1"}]}],["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":"1"}],["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":"One element selector"}]]}],["$","tr",null,{"children":[["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":["$","code",null,{"className":"bg-gray-200","children":".title"}]}],["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":"10"}],["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":"One class selector"}]]}],["$","tr",null,{"children":[["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":["$","code",null,{"className":"bg-gray-200","children":"#main"}]}],["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":"100"}],["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":"One ID selector"}]]}],["$","tr",null,{"children":[["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":["$","code",null,{"className":"bg-gray-200","children":"div.title"}]}],["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":"11"}],["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":"One element + one class"}]]}],["$","tr",null,{"children":[["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":["$","code",null,{"className":"bg-gray-200","children":"section #main .title h1"}]}],["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":"112"}],["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":"ID (100) + class (10) + element (1) + element (1)"}]]}],["$","tr",null,{"children":[["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":["$","code",null,{"className":"bg-gray-200","children":"style=\"color: red\""}]}],["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":"1000"}],["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":"Inline style"}]]}]]}]]}]]}]]}],["$","div",null,{"children":[["$","div",null,{"className":"mt-8 mb-2 font-bold text-2xl","children":"Which Rule Wins?"}],["$","ul",null,{"className":"ml-4","children":[["$","li",null,{"className":"list-disc list-inside","children":"If two rules apply to the same element: The one with higher specificity wins."}],["$","li",null,{"className":"list-disc list-inside","children":"If specificity is equal, the later rule in the CSS wins."}]]}]]}],["$","div",null,{"children":[["$","div",null,{"className":"mt-8 mb-2 font-bold text-2xl","children":"Advanced CSS Specificity Concepts"}],["$","table",null,{"className":"table-auto border-collapse border border-gray-400","children":[["$","thead",null,{"children":["$","tr",null,{"children":[["$","th",null,{"className":"border border-gray-400 px-4 py-2","children":"Concept"}],["$","th",null,{"className":"border border-gray-400 px-4 py-2","children":"Description"}],["$","th",null,{"className":"border border-gray-400 px-4 py-2","children":"Example / Notes"}]]}]}],["$","tbody",null,{"children":[["$","tr",null,{"children":[["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":"Specificity Hierarchy"}],["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":"Inline styles > IDs > Classes > Elements > Universal"}],["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":[["$","code",null,{"className":"bg-gray-200","children":"style=\"\""}]," wins over everything else"]}]]}],["$","tr",null,{"children":[["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":"!important Rule"}],["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":["Overrides all other declarations (except other"," ",["$","code",null,{"className":"bg-gray-200","children":"!important"}]," with higher specificity)"]}],["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":"Use sparingly – it can break maintainability"}]]}],["$","tr",null,{"children":[["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":"Chained Selectors"}],["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":"More selectors = more specific"}],["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":[["$","code",null,{"className":"bg-gray-200","children":".card .title h1"}]," ","(specificity: 1 + 10 + 1 = 12)"]}]]}],["$","tr",null,{"children":[["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":"Pseudo-classes vs. Classes"}],["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":[["$","code",null,{"className":"bg-gray-200","children":":hover"}],","," ",["$","code",null,{"className":"bg-gray-200","children":":nth-child()"}]," carry same weight as a class"]}],["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":"Same weight = 10"}]]}],["$","tr",null,{"children":[["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":":not() Selector"}],["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":["The selector inside"," ",["$","code",null,{"className":"bg-gray-200","children":":not()"}]," affects specificity, not the ",["$","code",null,{"className":"bg-gray-200","children":":not"}]," ","itself"]}],["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":[["$","code",null,{"className":"bg-gray-200","children":":not(.hidden)"}]," → counts as"," ",["$","code",null,{"className":"bg-gray-200","children":".hidden"}]," (10)"]}]]}],["$","tr",null,{"children":[["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":"Combining Selectors"}],["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":"Combining multiple selectors increases specificity"}],["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":[["$","code",null,{"className":"bg-gray-200","children":"ul li a.active"}]," = 1 (ul) + 1 (li) + 1 (a) + 10 (",["$","code",null,{"className":"bg-gray-200","children":".active"}],") = 13"]}]]}],["$","tr",null,{"children":[["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":"Repeated Selectors"}],["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":"Repetition increases specificity"}],["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":[["$","code",null,{"className":"bg-gray-200","children":"#id#id"}]," = 200 (but usually redundant)"]}]]}],["$","tr",null,{"children":[["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":"Inheritance Does Not Affect Specificity"}],["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":"Inherited styles don’t count toward specificity"}],["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":"Children inherit from parents unless overridden"}]]}]]}]]}]]}]]}]]}],["$","div",null,{"className":"mt-8","children":[["$","h3",null,{"className":"text-lg mb-4","children":"2.What is a CSS Grid? Briefly describe its advantages over Flexbox and explain how you would use it to create a responsive two-column layout with a sidebar on the left and main content on the right."}],["$","$L4",null,{"children":[["$","div",null,{"children":[["$","h4",null,{"className":"mt-4 mb-2 font-bold text-2xl","children":"What is CSS Grid?"}],["$","div",null,{"children":"CSS Grid is a two-dimensional layout system in CSS that allows you to design web layouts using rows and columns. Unlike Flexbox (which is one-dimensional), CSS Grid can control both axes (horizontal and vertical), making it ideal for complex layouts like dashboards, magazines, or app shells."}]]}],["$","div",null,{"className":"mb-8","children":[["$","h4",null,{"className":"mt-4 mb-2 font-bold text-2xl","children":"Advantages of CSS Grid over Flexbox"}],["$","div",null,{"children":["$","table",null,{"className":"table-auto border-collapse border border-gray-400 text-left","children":[["$","thead",null,{"children":["$","tr",null,{"children":[["$","th",null,{"className":"border border-gray-400 px-4 py-2","children":"Feature"}],["$","th",null,{"className":"border border-gray-400 px-4 py-2","children":"Flexbox"}],["$","th",null,{"className":"border border-gray-400 px-4 py-2","children":"CSS Grid"}]]}]}],["$","tbody",null,{"children":[["$","tr",null,{"children":[["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":"Layout direction"}],["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":"One-dimensional (row or column)"}],["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":"Two-dimensional (row and column)"}]]}],["$","tr",null,{"children":[["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":"Best use-case"}],["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":"Aligning items in a row/column"}],["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":"Building full page or complex layouts"}]]}],["$","tr",null,{"children":[["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":"Overlapping items"}],["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":"Difficult"}],["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":"Easy with grid layers (`grid-area`)"}]]}],["$","tr",null,{"children":[["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":"Positioning control"}],["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":"Limited to content flow"}],["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":"Precise control over placement"}]]}],["$","tr",null,{"children":[["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":"Empty space management"}],["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":"Harder to handle"}],["$","td",null,{"className":"border border-gray-400 px-4 py-2","children":"Grid handles gaps and tracks easily"}]]}]]}]]}]}]]}],["$","p",null,{"className":"mb-2","children":[["$","span",null,{"className":"text-red-400","children":"*Note:"}],"To test responsiveness, simply drag the editor's edge — there's no need to open the browser's developer tools"]}],["$","$L5",null,{"template":"react","theme":"dark","options":{"wrapContent":true,"showLineNumbers":false,"editorWidthPercentage":30,"editorHeight":800,"resizablePanels":true,"externalResources":["https://cdn.tailwindcss.com"]},"files":{"/index.html":{"code":"<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"UTF-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    <title>React App</title> \n    <script src=\"https://cdn.tailwindcss.com\"></script>\n  </head>\n  <body>\n    <div id=\"root\"></div>\n  </body>\n</html>","hidden":true},"/App.js":{"code":"$10"},"/index.js":{"code":"import React from \"react\";\n  import { createRoot } from \"react-dom/client\";\n  import App from \"./App\";\n  \n  const root = createRoot(document.getElementById(\"root\"));\n  root.render(<App />);","hidden":true}}}]]}]]}]]}]]}],["$","$L11",null,{"children":"$L12"}],[["$","link","0",{"rel":"stylesheet","href":"/gl-frontend-test/_next/static/css/b82b51330dad2c65.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","$L13",null,{"children":["$L14","$L15",["$","$L16",null,{"promise":"$@17"}]]}]]}],{},null,false]},null,false],["$","$1","h",{"children":[null,["$","$1","RG-nbTjHomS9GpRtbLB43",{"children":[["$","$L18",null,{"children":"$L19"}],null]}],null]}],false]],"m":"$undefined","G":["$1a","$undefined"],"s":false,"S":true}
+1b:"$Sreact.suspense"
+1c:I[4911,[],"AsyncMetadata"]
+12:["$","$1b",null,{"fallback":null,"children":["$","$L1c",null,{"promise":"$@1d"}]}]
+15:null
+19:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+14:null
+1d:{"metadata":[["$","title","0",{"children":"Frontend Test"}],["$","meta","1",{"name":"description","content":"Frontend Test"}],["$","meta","2",{"name":"generator","content":"Next.js"}],["$","link","3",{"rel":"icon","href":"/gl-frontend-test/favicon.ico","type":"image/x-icon","sizes":"16x16"}]],"error":null,"digest":"$undefined"}
+17:{"metadata":"$1d:metadata","error":null,"digest":"$undefined"}
