@@ -1,0 +1,159 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  padding: 20px;
+}
+
+.carousel {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.carousel-container {
+  display: flex;
+  overflow: auto;
+  padding: 1rem 0;
+  scrollbar-width: none; /* For Firefox */
+  -ms-overflow-style: none; /* For Internet Explorer and Edge */
+}
+
+.carousel-container::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Opera */
+}
+
+.carousel-item {
+  padding: 10px;
+}
+
+.carousel-item-content {
+  background-color: #fff;
+  border-radius: 10px;
+  height: 100%;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+/* Mobile: 1 item per row */
+.carousel-item {
+  flex: 0 0 100%;
+}
+
+.carousel-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  gap: 10px;
+  margin: 0 auto;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.carousel-item h3 {
+  margin: 10px 0;
+}
+
+.carousel-item p {
+  color: #555;
+}
+
+.carousel-pagination {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  position: relative;
+}
+
+.page-dot {
+  border: 1px solid #d9d9d9;
+  cursor: pointer;
+  color: #333;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: all 0.3s ease;
+  font-size: 14px;
+  background-color: #fff;
+  aspect-ratio: 1 / 1;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.page-dot:hover {
+  border-color: #40a9ff;
+  color: #40a9ff;
+}
+
+.page-dot.active {
+  border-color: #1677ff;
+  background-color: #1677ff;
+  box-shadow: unset;
+  color: #fff;
+}
+
+.arrow {
+  background-color: #fff;
+  border: 1px solid #d9d9d9;
+  border-radius: 0.5rem;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.arrow:hover {
+  border-color: #40a9ff;
+  background-color: #f0f8ff;
+}
+
+.arrow.left-arrow {
+  left: 10px;
+}
+
+.arrow.right-arrow {
+  right: 10px;
+}
+
+/* Tablet: 2 items per row */
+@media (min-width: 768px) {
+  .page-dot {
+    width: 36px;
+    height: 36px;
+  }
+  .carousel-item {
+    flex: 0 0 calc(100% / 2);
+  }
+}
+
+/* Desktop: 3 items per row */
+@media (min-width: 1024px) {
+  .page-dot {
+    width: 40px;
+    height: 40px;
+  }
+
+  .carousel-item {
+    flex: 0 0 calc(100% / 3);
+  }
+}

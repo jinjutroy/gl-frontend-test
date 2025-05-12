@@ -1,0 +1,218 @@
+import { Sandpack } from "@codesandbox/sandpack-react";
+import { FC } from "react";
+import ExpandCollapse from "../../components/expand-collapse/ExpandCollapse";
+
+const Part1: FC = () => {
+  return (
+    <div>
+      <p className="text-lg mb-4">
+        1. Create an HTML page that displays a product carousel showcasing three
+        different products.
+      </p>
+
+      <ExpandCollapse>
+        <p className="mb-2">
+          <span className="text-red-400">*Note:</span>I added some CSS and JS in
+          separate files to make the HTML preview more interactive and dynamic.
+        </p>
+        <Sandpack
+          template="static"
+          theme="dark"
+          options={{
+            wrapContent: true,
+            showLineNumbers: false,
+            editorWidthPercentage: 30,
+            editorHeight: 800,
+            resizablePanels: true,
+          }}
+          files={{
+            "/index.html": {
+              code: `<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Carousel Part 1 & 2</title> 
+    <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+    <div class="carousel">
+        <div class="carousel-container">
+            <!-- Product 1 -->
+            <div class="carousel-item">
+                <img
+                    src="https://dst.assets.gameloft.com/assets/DS_article_thumbnail_season4_1920x1080_EN_2c64867ea1.jpg"
+                    alt="Product 1"
+                />
+                <h3>SEASON 04</h3>
+                <p>Disney Speedstorm season 4 the cave of wonders available now</p>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="carousel-item">
+                <img
+                    src="https://dst.assets.gameloft.com/assets/DS_23037_S_Season3_Key_Art_XBOX_HERO_EN_1310aad214.jpg"
+                    alt="Product 2"
+                />
+                <h3>SEASON 3</h3>
+                <p>Disney Speedstorm season 3 ‘ohana available now</p>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="carousel-item">
+                <img
+                    src="https://dst.assets.gameloft.com/assets/DS_Season12_Banner_Background_EN_001c87e540.jpg"
+                    alt="Product 3"
+                />
+                <h3>SEASON 12</h3>
+                <p>Disney Speedstorm tron-inspired season 12 available now</p>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+        </div>
+    </div> 
+    <script src="./index.js"></script>
+</body>    
+</html>`,
+            },
+            "/styles.css": {
+              code: `
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.carousel {
+    width: 80%;
+    max-width: 1200px;
+    margin-inline: auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-container {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 20px;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    user-select: none;
+    aspect-ratio: 16/9;
+}
+
+.carousel-item h3 {
+    font-size: 2rem;
+    margin: 10px 0;
+    font-weight: 700;
+}
+
+.carousel-item p {
+    font-size: 1.25rem;
+    color: #555;
+}
+
+.controls {
+    position: absolute;
+    user-select: none;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.prev,
+.next {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+.prev {
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.next {
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.prev:hover,
+.next:hover {
+    transition: all 0.15s ease;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+    `.trim(),
+              hidden: true,
+            },
+            "/index.js": {
+              code: `
+let currentIndex = 0;
+const items = document.querySelectorAll(".carousel-item");
+const prevButton = document.querySelector(".prev");
+const nextButton = document.querySelector(".next");
+const carouselContainer = document.querySelector(".carousel-container");
+
+// Show the current slide
+function updateCarousel() {
+carouselContainer.style.transform = "translateX(-" + currentIndex * 100 + "%)";
+// Hide buttons at boundaries
+prevButton.style.visibility = currentIndex === 0 ? "hidden" : "visible";
+nextButton.style.visibility =
+    currentIndex === items.length - 1 ? "hidden" : "visible";
+}
+
+// Previous button
+prevButton.addEventListener("click", () => {
+if (currentIndex > 0) {
+    currentIndex -= 1;
+    updateCarousel();
+}
+});
+
+// Next button
+nextButton.addEventListener("click", () => {
+if (currentIndex < items.length - 1) {
+    currentIndex += 1;
+    updateCarousel();
+}
+});
+
+// Initialize carousel
+updateCarousel();
+    `.trim(),
+              hidden: true,
+            },
+          }}
+        />
+      </ExpandCollapse>
+    </div>
+  );
+};
+
+export default Part1;
