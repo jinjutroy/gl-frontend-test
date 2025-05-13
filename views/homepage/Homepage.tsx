@@ -10,7 +10,11 @@ import Part42 from "../part4-2/Part42";
 const Homepage = () => {
   return (
     <div className="bg-white py-20 px-10 text-black">
-      <h1 className="text-5xl font-bold mb-10 text-center">FRONTEND TEST</h1>
+      <h1 className="text-5xl font-bold mb-6 text-center">FRONTEND TEST</h1>
+      <div className="mb-10 flex items-center gap-4 bg-gray-200 p-4">
+        <p className="text-4xl font-semibold">Bùi Ngọc Yên</p>
+        <p className="text-2xl">(Frontend Developer)</p>
+      </div>
       <div className="part-1">
         <h3 className="font-bold text-3xl mb-8">
           Part 1: Responsive HTML & CSS
